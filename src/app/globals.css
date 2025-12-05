@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .hover-effect {
+    @apply transition-all duration-300 ease-out;
+  }
+  .hover-effect:hover {
+    @apply -translate-y-2 shadow-xl shadow-blue-500/20;
+  }
+}
