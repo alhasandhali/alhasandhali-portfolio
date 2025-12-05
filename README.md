@@ -24,42 +24,6 @@ A modern, responsive, and interactive portfolio website built with Next.js 16, R
 - **Forms**: [React Hook Form](https://react-hook-form.com/) & [EmailJS](https://www.emailjs.com/)
 - **Linting**: ESLint
 
-## 📦 Getting Started
-
-Follow these steps to set up the project locally:
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/alhasandhali/portfolio.git
-    cd portfolio
-    ```
-
-2.  **Install dependencies:**
-
-    ```bash
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    ```
-
-3.  **Run the development server:**
-
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open your browser:**
-
-    Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
-
-## 🚀 Deployment
-
-The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## 📄 License
 
