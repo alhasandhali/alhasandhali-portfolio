@@ -25,6 +25,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
+
 @layer utilities {
   .hover-effect {
     @apply transition-all duration-300 ease-out;

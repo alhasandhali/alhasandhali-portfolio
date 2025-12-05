@@ -1,7 +1,6 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import emailjs from "emailjs-com";
 import { FiMail, FiGithub, FiLinkedin, FiPhone } from "react-icons/fi";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,13 +16,26 @@ interface ContactFormInputs {
 export function Contact() {
     const { register, handleSubmit, reset } = useForm<ContactFormInputs>();
 
-    const onSubmit: SubmitHandler<ContactFormInputs> = (data) => {
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', data as unknown as Record<string, unknown>, 'YOUR_PUBLIC_KEY')
-            .then(() => {
+    const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
                 alert("Message sent successfully!");
                 reset();
-            })
-            .catch((err) => console.error("Failed to send", err));
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error("Failed to send", error);
+            alert("Failed to send message. Please try again.");
+        }
     };
 
     return (
@@ -91,7 +103,7 @@ export function Contact() {
                             <div>
                                 <Textarea {...register("message", { required: true })} rows={4} placeholder="Message" className="bg-white dark:bg-neutral-950 resize-none min-h-[120px]" />
                             </div>
-                            <Button type="submit" className="w-full h-12 bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold hover:shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-0.5">
+                            <Button type="submit" className="w-full h-12 bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold hover:shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer">
                                 Send Message
                             </Button>
                         </form>
