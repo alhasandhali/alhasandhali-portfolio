@@ -24,11 +24,6 @@ A modern, responsive, and interactive portfolio website built with Next.js 16, R
 - **Forms**: [React Hook Form](https://react-hook-form.com/) & [EmailJS](https://www.emailjs.com/)
 - **Linting**: ESLint
 
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
 ---
 
 **Al Hasan Dhali** - Full Stack Developer
