@@ -1,24 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
 import { PROJECTS } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Projects() {
     return (
-        <section id="projects" className="py-32 px-4">
+        <section id="projects" className="py-20 px-4">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center dark:text-white">Featured Projects</h2>
+                <ScrollReveal width="100%">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center dark:text-white">Featured Projects</h2>
+                </ScrollReveal>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {PROJECTS.map((project) => (
-                        <motion.div
+                    {PROJECTS.map((project, index) => (
+                        <ScrollReveal
                             key={project.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            delay={index * 0.1}
                             className="h-full"
                         >
                             <div className="group relative h-full rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden hover-effect flex flex-col">
@@ -65,7 +65,7 @@ export function Projects() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>

@@ -1,32 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { TIMELINE } from "@/lib/data";
 import { FiCode, FiHeart, FiTarget } from "react-icons/fi";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+
+import { motion } from "framer-motion";
 
 export function About() {
     return (
-        <section id="about" className="py-32 px-4 relative bg-neutral-50 dark:bg-neutral-900/50">
+        <section id="about" className="py-20 px-4 relative bg-neutral-50 dark:bg-neutral-900/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
+                <ScrollReveal width="100%" className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">About Me</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
                         Get to know me better - my journey, passions, and what drives me as a developer
                     </p>
-                </motion.div>
+                </ScrollReveal>
 
                 {/* Professional Introduction */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-16 bg-white dark:bg-neutral-900 rounded-2xl p-8 md:p-12 shadow-lg border border-neutral-200 dark:border-neutral-800"
-                >
+                <ScrollReveal width="100%" delay={0.2} className="mb-16 bg-white dark:bg-neutral-900 rounded-2xl p-8 md:p-12 shadow-lg border border-neutral-200 dark:border-neutral-800">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
                         <div className="p-3 rounded-lg bg-blue-500/10 text-blue-500">
                             <FiCode className="text-2xl" />
@@ -44,16 +36,11 @@ export function About() {
                             </p>
                         </div>
                     </div>
-                </motion.div>
+                </ScrollReveal>
 
                 {/* Programming Journey & Work Preferences */}
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-lg border border-neutral-200 dark:border-neutral-800"
-                    >
+                    <ScrollReveal delay={0.3} className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-lg border border-neutral-200 dark:border-neutral-800">
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
                             <div className="p-3 rounded-lg bg-purple-500/10 text-purple-500">
                                 <FiTarget className="text-2xl" />
@@ -71,14 +58,9 @@ export function About() {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
+                    </ScrollReveal>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-lg border border-neutral-200 dark:border-neutral-800"
-                    >
+                    <ScrollReveal delay={0.4} className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-lg border border-neutral-200 dark:border-neutral-800">
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
                             <div className="p-3 rounded-lg bg-green-500/10 text-green-500">
                                 <FiHeart className="text-2xl" />
@@ -97,18 +79,13 @@ export function About() {
                                 </p>
                             </div>
                         </div>
-                    </motion.div>
+                    </ScrollReveal>
                 </div>
 
                 {/* Timeline Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-8"
-                >
+                <ScrollReveal width="100%" className="mb-8">
                     <h3 className="text-3xl font-bold mb-12 text-center dark:text-white">My Journey Timeline</h3>
-                </motion.div>
+                </ScrollReveal>
 
                 <div className="relative">
                     <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-neutral-200 dark:bg-neutral-800 md:-translate-x-1/2" />
@@ -128,14 +105,15 @@ export function About() {
 
                                 <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-black transform -translate-x-1/2 mt-1.5 z-10 shadow-[0_0_20px_rgba(59,130,246,0.5)]" />
 
-                                <div className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                                    <h3 className="text-2xl font-bold text-neutral-900 dark:text-white">{item.title}</h3>
-                                    <div className="flex items-center gap-2 text-blue-500 font-mono text-sm my-2 md:justify-end">
-                                        {index % 2 !== 0 && <span>{item.year}</span>}
-                                        {index % 2 === 0 && <span className="md:order-last">{item.year}</span>}
+                                <div className={`flex-1 pl-16 md:pl-0 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                                    <div className="bg-white dark:bg-neutral-900 p-6 rounded-2xl shadow-lg border border-neutral-200 dark:border-neutral-800 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-colors relative">
+                                        <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-2">{item.title}</h3>
+                                        <div className={`flex items-center gap-2 text-blue-500 font-mono text-sm mb-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                                            <span>{item.year}</span>
+                                        </div>
+                                        <p className={`text-neutral-500 dark:text-neutral-400 text-sm font-medium mb-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>{item.place}</p>
+                                        <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.desc}</p>
                                     </div>
-                                    <p className="text-neutral-500 dark:text-neutral-400 text-sm font-medium mb-2">{item.place}</p>
-                                    <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}

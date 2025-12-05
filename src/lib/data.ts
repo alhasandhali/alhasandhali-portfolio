@@ -3,7 +3,7 @@ import {
     SiJavascript, SiTypescript, SiFirebase, SiPostgresql, SiPython,
     SiSpringboot, SiBootstrap, SiExpress, SiGit, SiMysql, SiGithub, SiCplusplus
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaGraduationCap, FaBriefcase } from "react-icons/fa";
 import React from "react";
 
 export const SKILLS_CATEGORIES = [
@@ -118,12 +118,16 @@ export const TIMELINE = [
         year: "2023 - 2027",
         title: "BSc in Computer Science & Engineering",
         place: "Southeast University, Dhaka",
-        desc: "Currently pursuing degree. Focused on Data Structures, Algorithms, and Web Technologies."
+        desc: "Currently pursuing degree. Focused on Data Structures, Algorithms, and Web Technologies.",
+        icon: React.createElement(FaGraduationCap),
+        type: "education"
     },
     {
         year: "Nov 2025",
         title: "Full Stack Development (Projects)",
         place: "Personal Projects",
-        desc: "Built scalable applications like TechTrove and PlateShare using the MERN stack and Next.js."
+        desc: "Built scalable applications like TechTrove and PlateShare using the MERN stack and Next.js.",
+        icon: React.createElement(FaBriefcase),
+        type: "work"
     }
 ];

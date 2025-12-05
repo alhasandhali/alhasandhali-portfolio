@@ -75,7 +75,7 @@ export function Hero() {
             {/* Hero Content - Side by Side Layout */}
             <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 relative z-10 w-full">
                 <div className="flex justify-center mb-6">
-                    <div className="inline-block px-4 py-2 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 rounded-full border border-blue-500/20 backdrop-blur-md">
+                    <div className="inline-block px-4 py-2 text-center text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 rounded-full border border-blue-500/20 backdrop-blur-md">
                         👋 Welcome to my development space
                     </div>
                 </div>
