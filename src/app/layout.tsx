@@ -43,9 +43,6 @@ export const metadata: Metadata = {
     images: ["/hero-profile-final.jpg"],
     creator: "@Alhasandhali",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
