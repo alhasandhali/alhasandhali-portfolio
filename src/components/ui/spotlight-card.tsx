@@ -21,18 +21,20 @@ export const SpotlightCard = ({ children, className = "" }: { children: React.Re
             onMouseEnter={() => setIsFocused(true)}
             onMouseLeave={() => setIsFocused(false)}
             className={cn(
-                "relative rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden hover-effect",
+                "relative rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover-effect",
                 className
             )}
         >
-            <div
-                className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
-                style={{
-                    opacity: isFocused ? 1 : 0,
-                    background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(59,130,246,0.15), transparent 40%)`,
-                }}
-            />
-            <div className="relative h-full">{children}</div>
+            <div className="relative h-full overflow-hidden rounded-xl">
+                <div
+                    className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+                    style={{
+                        opacity: isFocused ? 1 : 0,
+                        background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(59,130,246,0.15), transparent 40%)`,
+                    }}
+                />
+                <div className="relative h-full">{children}</div>
+            </div>
         </div>
     );
 };

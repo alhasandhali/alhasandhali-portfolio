@@ -11,7 +11,7 @@ interface ScrollRevealProps {
 
 export const ScrollReveal = ({ children, className = "", delay = 0, width = "fit-content" }: ScrollRevealProps) => {
     return (
-        <div style={{ width, overflow: "hidden" }} className={className}>
+        <div style={{ width }} className={className}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },
