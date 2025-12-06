@@ -30,7 +30,7 @@ export const SpotlightCard = ({ children, className = "" }: { children: React.Re
                     className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
                     style={{
                         opacity: isFocused ? 1 : 0,
-                        background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(59,130,246,0.15), transparent 40%)`,
+                        background: `radial-gradient(500px circle at ${position.x}px ${position.y}px, rgba(59,130,246,0.1) 0%, transparent 80%)`,
                     }}
                 />
                 <div className="relative h-full">{children}</div>

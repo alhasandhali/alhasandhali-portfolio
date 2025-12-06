@@ -7,13 +7,13 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
     return (
         <div
             className={cn(
-                "absolute h-full w-full inset-0 bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
+                "absolute h-full w-full inset-0 bg-white dark:bg-neutral-950 transition-colors duration-300 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
                 className
             )}
         >
-            <div className="absolute inset-0 bg-fixed bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            <div className="absolute h-full w-full bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            <div className="absolute inset-0 bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="absolute inset-0 bg-fixed bg-white dark:bg-neutral-950 transition-colors duration-300 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="absolute h-full w-full bg-white dark:bg-neutral-950 transition-colors duration-300 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="absolute inset-0 bg-white dark:bg-neutral-950 transition-colors duration-300 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

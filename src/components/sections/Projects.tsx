@@ -11,7 +11,7 @@ export function Projects() {
         <section id="projects" className="py-12 px-4">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal width="100%">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center dark:text-white">Featured Projects</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-neutral-900 dark:text-white">Featured Projects</h2>
                 </ScrollReveal>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -21,8 +21,8 @@ export function Projects() {
                             delay={index * 0.1}
                             className="h-full p-3"
                         >
-                            <div className="group relative h-full rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover-effect">
-                                <div className="flex flex-col h-full w-full overflow-hidden rounded-2xl">
+                            <div className="group h-full flex flex-col bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                                <div className="flex flex-col h-full w-full">
                                     {/* Project Image */}
                                     <div className="relative h-48 w-full overflow-hidden">
                                         <Image
@@ -36,8 +36,8 @@ export function Projects() {
 
                                     <div className="p-6 flex flex-col flex-1">
                                         <div className="mb-auto">
-                                            <h3 className="text-xl font-bold mb-2 dark:text-white">{project.title}</h3>
-                                            <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-4">
+                                            <h3 className="text-xl font-bold mb-2 text-neutral-900 dark:text-white line-clamp-1" title={project.title}>{project.title}</h3>
+                                            <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-4 line-clamp-3">
                                                 {project.desc}
                                             </p>
                                         </div>

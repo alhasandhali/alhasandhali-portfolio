@@ -6,11 +6,11 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Skills() {
     return (
-        <section id="skills" className="py-12 px-4 bg-white dark:bg-black">
+        <section id="skills" className="py-12 px-4 bg-white dark:bg-neutral-950">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal width="100%" className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">Technical Arsenal</h2>
-                    <p className="text-neutral-500">Tools and technologies I use to build amazing web applications</p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900 dark:text-white">Technical Arsenal</h2>
+                    <p className="text-neutral-500 dark:text-neutral-400">Tools and technologies I use to build amazing web applications</p>
                 </ScrollReveal>
 
                 <div className="space-y-12">
@@ -20,7 +20,7 @@ export function Skills() {
                             delay={categoryIdx * 0.1}
                             width="100%"
                         >
-                            <h3 className="text-2xl font-bold dark:text-white mb-6 text-center">
+                            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6 text-center">
                                 {category.category}
                             </h3>
                             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">

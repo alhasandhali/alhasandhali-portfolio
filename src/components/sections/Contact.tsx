@@ -58,7 +58,7 @@ export function Contact() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal width="100%" className="max-w-4xl mx-auto bg-white/50 dark:bg-neutral-900/50 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800 rounded-2xl p-4 sm:p-6 md:p-12 shadow-2xl">
                     <div className="text-center mb-8 md:mb-12">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 dark:text-white">Let&apos;s Work Together</h2>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-neutral-900 dark:text-white">Let&apos;s Work Together</h2>
                         <p className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base">Have a project in mind? Let&apos;s build something amazing.</p>
                     </div>
 
@@ -71,7 +71,7 @@ export function Contact() {
                                     </div>
                                     <div className="min-w-0">
                                         <p className="text-xs sm:text-sm text-neutral-500">Email</p>
-                                        <p className="font-medium text-sm sm:text-base dark:text-white truncate">alhasandhali@gmail.com</p>
+                                        <p className="font-medium text-sm sm:text-base text-neutral-900 dark:text-white truncate">alhasandhali@gmail.com</p>
                                     </div>
                                 </a>
 
@@ -81,7 +81,7 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <p className="text-xs sm:text-sm text-neutral-500">Phone</p>
-                                        <p className="font-medium text-sm sm:text-base dark:text-white">+880 1993-821479</p>
+                                        <p className="font-medium text-sm sm:text-base text-neutral-900 dark:text-white">+880 1993-821479</p>
                                     </div>
                                 </a>
 
@@ -91,7 +91,7 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <p className="text-xs sm:text-sm text-neutral-500">Location</p>
-                                        <p className="font-medium text-sm sm:text-base dark:text-white">Dhaka, Bangladesh</p>
+                                        <p className="font-medium text-sm sm:text-base text-neutral-900 dark:text-white">Dhaka, Bangladesh</p>
                                     </div>
                                 </div>
                             </div>
@@ -108,13 +108,27 @@ export function Contact() {
 
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                             <div>
-                                <Input {...register("name", { required: true })} placeholder="Name" className="bg-white dark:bg-neutral-950 h-12" />
+                                <Input
+                                    {...register("name", { required: true })}
+                                    placeholder="Name"
+                                    className="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300"
+                                />
                             </div>
                             <div>
-                                <Input type="email" {...register("email", { required: true })} placeholder="Email" className="bg-white dark:bg-neutral-950 h-12" />
+                                <Input
+                                    type="email"
+                                    {...register("email", { required: true })}
+                                    placeholder="Email"
+                                    className="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300"
+                                />
                             </div>
                             <div>
-                                <Textarea {...register("message", { required: true })} rows={4} placeholder="Message" className="bg-white dark:bg-neutral-950 resize-none min-h-[120px]" />
+                                <Textarea
+                                    {...register("message", { required: true })}
+                                    rows={4}
+                                    placeholder="Message"
+                                    className="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 resize-none"
+                                />
                             </div>
                             <Button type="submit" disabled={isLoading} className="w-full h-12 bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold hover:shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
                                 {isLoading ? "Sending..." : "Send Message"}

@@ -11,7 +11,7 @@ export function About() {
         <section id="about" className="py-12 px-4 relative bg-neutral-50 dark:bg-neutral-900/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <ScrollReveal width="100%" className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">About Me</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900 dark:text-white">About Me</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
                         Get to know me better - my journey, passions, and what drives me as a developer
                     </p>
@@ -24,7 +24,7 @@ export function About() {
                             <FiCode className="text-2xl" />
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold dark:text-white mb-4">Professional Overview</h3>
+                            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Professional Overview</h3>
                             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
                                 I&apos;m a passionate Full-Stack Developer with expertise in building modern, scalable web applications.
                                 My journey in software development combines strong technical skills with a creative approach to problem-solving.
@@ -46,7 +46,7 @@ export function About() {
                                 <FiTarget className="text-2xl" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold dark:text-white mb-4">My Journey</h3>
+                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">My Journey</h3>
                                 <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
                                     My programming journey began with curiosity about how websites work. What started as
                                     tinkering with HTML and CSS evolved into a deep passion for full-stack development.
@@ -66,7 +66,7 @@ export function About() {
                                 <FiHeart className="text-2xl" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold dark:text-white mb-4">Work & Interests</h3>
+                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">Work & Interests</h3>
                                 <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-3">
                                     <strong className="text-neutral-900 dark:text-white">Work Style:</strong> I thrive in collaborative
                                     environments and enjoy pair programming. I believe in clean code, thorough documentation,
@@ -82,9 +82,8 @@ export function About() {
                     </ScrollReveal>
                 </div>
 
-                {/* Timeline Section */}
                 <ScrollReveal width="100%" className="mb-8">
-                    <h3 className="text-3xl font-bold mb-12 text-center dark:text-white">My Journey Timeline</h3>
+                    <h3 className="text-3xl font-bold mb-12 text-center text-neutral-900 dark:text-white">My Journey Timeline</h3>
                 </ScrollReveal>
 
                 <div className="relative">
