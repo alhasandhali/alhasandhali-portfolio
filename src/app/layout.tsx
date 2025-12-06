@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const space = Space_Grotesk({ subsets: ["latin"], variable: '--font-space' });
 
 export const metadata: Metadata = {
-  title: "Al Hasan Dhali | Front-end Developer",
-  description: "Portfolio of Al Hasan Dhali - Specialized in React, Next.js, and MERN Stack.",
+  title: "Al Hasan Dhali | Full-stack Developer",
+  description: "Portfolio of Al Hasan Dhali - Specialized in React, Next.js and MERN Stack.",
 };
 
 export default function RootLayout({
