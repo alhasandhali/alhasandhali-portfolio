@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const space = Space_Grotesk({ subsets: ["latin"], variable: '--font-space' });
@@ -28,6 +29,7 @@ export default function RootLayout({
               {children}
             </div>
           </SmoothScroll>
+          <Toaster position="top-right" richColors />
         </ThemeProvider>
       </body>
     </html>

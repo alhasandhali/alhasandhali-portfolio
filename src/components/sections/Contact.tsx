@@ -6,6 +6,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 interface ContactFormInputs {
     name: string;
@@ -15,26 +18,36 @@ interface ContactFormInputs {
 
 export function Contact() {
     const { register, handleSubmit, reset } = useForm<ContactFormInputs>();
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
-        try {
-            const response = await fetch('/api/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
+        setIsLoading(true);
 
-            if (response.ok) {
-                alert("Message sent successfully!");
-                reset();
-            } else {
-                throw new Error('Failed to send message');
-            }
+        try {
+            await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                {
+                    from_name: data.name,
+                    user_email: data.email,
+                    message: data.message,
+                },
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+
+            toast.success("Message sent successfully!", {
+                description: "I'll get back to you as soon as possible.",
+                duration: 5000,
+            });
+            reset();
         } catch (error) {
-            console.error("Failed to send", error);
-            alert("Failed to send message. Please try again.");
+            console.error("Failed to send email:", error);
+            toast.error("Failed to send message", {
+                description: "Please try again or email me directly at alhasandhali@gmail.com",
+                duration: 5000,
+            });
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -103,8 +116,8 @@ export function Contact() {
                             <div>
                                 <Textarea {...register("message", { required: true })} rows={4} placeholder="Message" className="bg-white dark:bg-neutral-950 resize-none min-h-[120px]" />
                             </div>
-                            <Button type="submit" className="w-full h-12 bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold hover:shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer">
-                                Send Message
+                            <Button type="submit" disabled={isLoading} className="w-full h-12 bg-linear-to-r from-blue-600 to-blue-500 text-white font-bold hover:shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                                {isLoading ? "Sending..." : "Send Message"}
                             </Button>
                         </form>
                     </div>
