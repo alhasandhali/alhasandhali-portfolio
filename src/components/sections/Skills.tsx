@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Skills() {
     return (
-        <section id="skills" className="py-16 px-4 bg-white dark:bg-black">
+        <section id="skills" className="py-12 px-4 bg-white dark:bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal width="100%" className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">Technical Arsenal</h2>

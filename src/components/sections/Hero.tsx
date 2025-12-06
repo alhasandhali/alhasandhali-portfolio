@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FiDownload, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import gsap from "gsap";
 import Image from "next/image";
 
@@ -108,7 +109,7 @@ export function Hero() {
                         {/* Social Links */}
                         <div className="flex gap-4 mb-8 justify-center md:justify-start">
                             <a
-                                href="https://github.com/yourusername"
+                                href="https://github.com/alhasandhali"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative p-3 rounded-full bg-neutral-900/50 border border-neutral-700 hover:border-blue-500 transition-all duration-300 hover:scale-110"
@@ -116,7 +117,7 @@ export function Hero() {
                                 <FiGithub className="text-xl text-neutral-300 group-hover:text-blue-400 transition-colors" />
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://www.linkedin.com/in/al-hasan-dhali/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative p-3 rounded-full bg-neutral-900/50 border border-neutral-700 hover:border-blue-500 transition-all duration-300 hover:scale-110"
@@ -124,12 +125,12 @@ export function Hero() {
                                 <FiLinkedin className="text-xl text-neutral-300 group-hover:text-blue-400 transition-colors" />
                             </a>
                             <a
-                                href="https://twitter.com/yourusername"
+                                href="https://x.com/Alhasandhali"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative p-3 rounded-full bg-neutral-900/50 border border-neutral-700 hover:border-blue-500 transition-all duration-300 hover:scale-110"
                             >
-                                <FiTwitter className="text-xl text-neutral-300 group-hover:text-blue-400 transition-colors" />
+                                <FaXTwitter className="text-xl text-neutral-300 group-hover:text-blue-400 transition-colors" />
                             </a>
                         </div>
 
@@ -142,7 +143,7 @@ export function Hero() {
                                 </span>
                             </a>
 
-                            <a href="/resume.pdf" download className="inline-flex h-14 items-center justify-center rounded-full border-2 border-neutral-700 bg-neutral-900/50 backdrop-blur-sm px-8 font-medium text-neutral-100 transition-colors hover:bg-neutral-800 hover:border-blue-500">
+                            <a href="/Al_Hasan_Dhali_resume_Full_Stack.pdf" download className="inline-flex h-14 items-center justify-center rounded-full border-2 border-neutral-700 bg-neutral-900/50 backdrop-blur-sm px-8 font-medium text-neutral-100 transition-colors hover:bg-neutral-800 hover:border-blue-500">
                                 Download Resume <FiDownload className="ml-2" />
                             </a>
                         </div>

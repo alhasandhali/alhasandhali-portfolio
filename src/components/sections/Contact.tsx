@@ -39,7 +39,7 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-12 md:py-16 px-4 relative overflow-hidden">
+        <section id="contact" className="py-12 px-4 relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-blue-500/5 blur-3xl -z-10 rounded-full" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ export function Contact() {
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
                         <div className="space-y-6 md:space-y-8">
                             <div className="space-y-4 md:space-y-6">
-                                <a href="mailto:alhasandhali@gmail.com" className="flex items-center gap-3 sm:gap-4 group p-2 sm:p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-800">
+                                <a href="mailto:alhasandhali@gmail.com" className="flex items-center gap-3 sm:gap-4 group p-2 sm:p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-800 cursor-pointer">
                                     <div className="p-2 sm:p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors shrink-0">
                                         <FiMail className="text-lg sm:text-xl" />
                                     </div>
@@ -62,13 +62,13 @@ export function Contact() {
                                     </div>
                                 </a>
 
-                                <a href="tel:+8801234567890" className="flex items-center gap-3 sm:gap-4 group p-2 sm:p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-800">
+                                <a href="tel:+8801993821479" className="flex items-center gap-3 sm:gap-4 group p-2 sm:p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-800 cursor-pointer">
                                     <div className="p-2 sm:p-3 rounded-lg bg-green-50 dark:bg-green-900/20 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors shrink-0">
                                         <FiPhone className="text-lg sm:text-xl" />
                                     </div>
                                     <div>
                                         <p className="text-xs sm:text-sm text-neutral-500">Phone</p>
-                                        <p className="font-medium text-sm sm:text-base dark:text-white">+880 1234-567890</p>
+                                        <p className="font-medium text-sm sm:text-base dark:text-white">+880 1993-821479</p>
                                     </div>
                                 </a>
 
@@ -84,10 +84,10 @@ export function Contact() {
                             </div>
 
                             <div className="flex gap-3 sm:gap-4">
-                                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 transition-colors group flex-1 flex justify-center items-center">
+                                <a href="https://github.com/alhasandhali" target="_blank" rel="noopener noreferrer" className="p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 transition-colors group flex-1 flex justify-center items-center">
                                     <FiGithub className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 group-hover:text-blue-500" />
                                 </a>
-                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 transition-colors group flex-1 flex justify-center items-center">
+                                <a href="https://www.linkedin.com/in/al-hasan-dhali/" target="_blank" rel="noopener noreferrer" className="p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 transition-colors group flex-1 flex justify-center items-center">
                                     <FiLinkedin className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 group-hover:text-blue-500" />
                                 </a>
                             </div>

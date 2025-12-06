@@ -8,7 +8,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Projects() {
     return (
-        <section id="projects" className="py-20 px-4">
+        <section id="projects" className="py-12 px-4">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal width="100%">
                     <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center dark:text-white">Featured Projects</h2>
