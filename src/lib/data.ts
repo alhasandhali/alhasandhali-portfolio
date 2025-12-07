@@ -50,8 +50,8 @@ export const PROJECTS = [
         detailedDesc: "TechTrove is a comprehensive product management platform built with Next.js and Express.js. It features secure user authentication, real-time product updates, and an intuitive admin dashboard for managing inventory. The application implements best practices for security and performance optimization.",
         tech: ["Next.js", "Tailwind CSS", "NextAuth", "Express.js", "MongoDB"],
         image: "/projects/techtrove.png",
-        live: "https://your-techtrove-link.com",
-        github: "https://github.com/your-username/techtrove",
+        live: "https://techtrove-ahd.vercel.app/",
+        github: "https://github.com/alhasandhali/mini-ecommerce-client-side",
         gradient: "from-blue-500 to-cyan-400",
         challenges: [
             "Implementing secure authentication with NextAuth and session management",
@@ -72,8 +72,8 @@ export const PROJECTS = [
         detailedDesc: "PlateShare is a social impact platform that connects food donors with those in need. Built with the MERN stack, it features real-time donation tracking, user profiles, and an intelligent matching system. The platform uses Firebase for authentication and real-time notifications.",
         tech: ["React", "Node.js", "MongoDB", "Firebase", "Express.js"],
         image: "/projects/plateshare.png",
-        live: "https://your-plateshare-link.com",
-        github: "https://github.com/your-username/plateshare",
+        live: "https://plateshare-ahd.netlify.app/",
+        github: "https://github.com/alhasandhali/plateShare-client-site",
         gradient: "from-green-500 to-emerald-400",
         challenges: [
             "Designing an efficient matching algorithm for donors and recipients",
@@ -95,8 +95,8 @@ export const PROJECTS = [
         detailedDesc: "Gamora is a modern gaming showcase platform that features an extensive game library with detailed information, user reviews, and wishlist functionality. Built with React and styled with DaisyUI, it showcases smooth animations using Framer Motion and implements protected routes for user-specific features.",
         tech: ["React", "DaisyUI", "Firebase", "Framer Motion", "React Router"],
         image: "/projects/gamora.png",
-        live: "https://your-gamora-link.com",
-        github: "https://github.com/your-username/gamora",
+        live: "https://gamora-ahd.netlify.app/",
+        github: "https://github.com/alhasandhali/gamora",
         gradient: "from-purple-600 to-pink-500",
         challenges: [
             "Integrating third-party gaming APIs for real-time data",
