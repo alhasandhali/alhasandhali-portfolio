@@ -45,6 +45,29 @@ export const SKILLS_CATEGORIES = [
 export const PROJECTS = [
     {
         id: 1,
+        title: "BookCourier - Modern Bookstore Ecosystem",
+        desc: "A premium full-stack bookstore platform featuring role-based access control, secure payments, and real-time inventory management.",
+        detailedDesc: "BookCourier is a comprehensive MERN-stack application that connects readers, librarians, and administrators. It features a polished frontend with dynamic book discovery, a robust backend with secure JWT authentication, and a detailed dashboard for managing inventory, tracking orders, and analyzing platform-wide statistics.",
+        tech: ["React 19", "Node.js", "MongoDB", "Tailwind CSS 4", "Firebase Auth"],
+        image: "/projects/book-courier-dark.png",
+        live: "https://book-courier.vercel.app/",
+        github: "https://github.com/alhasandhali/book-courier-client-side.git",
+        gradient: "from-blue-600 to-indigo-500",
+        challenges: [
+            "Implementing secure Role-Based Access Control (RBAC) for Admins, Librarians, and Users",
+            "Managing complex state for the unified checkout and inventory synchronization",
+            "Designing a relational-style data model within a NoSQL MongoDB environment",
+            "Handling multi-step payment processing and automatic stock reduction logic"
+        ],
+        improvements: [
+            "Integrate a PDF viewer for digital book previews or E-book reading",
+            "Implement a real-time chat system between readers and librarians",
+            "Add an AI-powered recommendation engine based on user reading history",
+            "Develop a mobile application using React Native for on-the-go browsing"
+        ]
+    },
+    {
+        id: 2,
         title: "TechTrove Product Management",
         desc: "A responsive Next.js product management system with secure authentication (NextAuth) and full CRUD functionality.",
         detailedDesc: "TechTrove is a comprehensive product management platform built with Next.js and Express.js. It features secure user authentication, real-time product updates, and an intuitive admin dashboard for managing inventory. The application implements best practices for security and performance optimization.",
@@ -66,7 +89,7 @@ export const PROJECTS = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         title: "PlateShare Donation Platform",
         desc: "MERN-based platform connecting donors and recipients with dynamic management and Firebase authentication.",
         detailedDesc: "PlateShare is a social impact platform that connects food donors with those in need. Built with the MERN stack, it features real-time donation tracking, user profiles, and an intelligent matching system. The platform uses Firebase for authentication and real-time notifications.",
@@ -89,7 +112,7 @@ export const PROJECTS = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: "Gamora Gaming Showcase",
         desc: "Responsive gaming showcase featuring protected routes, Firebase auth, and interactive Framer Motion animations.",
         detailedDesc: "Gamora is a modern gaming showcase platform that features an extensive game library with detailed information, user reviews, and wishlist functionality. Built with React and styled with DaisyUI, it showcases smooth animations using Framer Motion and implements protected routes for user-specific features.",
